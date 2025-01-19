@@ -14,11 +14,11 @@ Edo_dictionary ={"la re":  'come',
                   "ito han": 'mercy',
                   "uwa":  'prosperity',
                   "efua":  'sunshine',
-                  "ose":  'beauty',
-                  "efosa":  'God blessing',
+                  "igo" :  'money',
+                  "efosa": 'God blessing',
                   "osaje":   'God sent',
                   "osarenmen":   'Ayewhosa',
-                  'God gift':  "who is like God"}
+                  'God gift':  'who is like God'}
 
 from tkinter import Tk, Entry, Button, Label, StringVar
 
@@ -26,12 +26,12 @@ window = Tk()
 window.geometry("600x250")
 window.title("Edo_dictionary")
 
-word = StringVar()
-word_entry = Entry(window, textvariable=word, font=('ariel', 19))
+word: StringVar = StringVar()
+word_entry =Entry(window, textvariable=word, font=('ariel',19))
 word_entry.pack()
 
 result = StringVar()
-result_label = Label(window, textvariable=result)
+result_label =Label(window, textvariable=result)
 result_label.pack()
 
 def search(word):
@@ -46,7 +46,5 @@ search_btn.pack()
 
 exit_button = Button(window, text="search", command=lambda: exit())
 
-word_entry = Entry(window, textvariable=word, font=('ariel', 19))
-window.mainloop()
-
+word_entry = Entry(window, textvariable=word, font=('ariel',19))
 
